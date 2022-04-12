@@ -3,7 +3,7 @@ const router = express.Router();
 const locationsCtrl = require("../controllers/locations");
 const isLoggedIn = require("../config/auth");
 
-//matches the url locations
+
 router.get("/", locationsCtrl.index);
 router.get("/new", isLoggedIn, locationsCtrl.new);
 router.get("/:id", locationsCtrl.show);

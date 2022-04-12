@@ -13,6 +13,8 @@ function deleteComment(req, res, next) {
       if (!comment.user.equals(req.user._id))
         return res.redirect(`/locations/${locationDocument._id}`);
       comment.remove();
+
+      
       locationDocument.save(function (err) {
         if (err) next(err);
         res.redirect(`/locations/${locationDocument._id}`);

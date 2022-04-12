@@ -1,9 +1,10 @@
 const Location = require("../models/location");
 
 function show(req, res) {
-  Location.findById({ _id: req.params.id }, function (err, location) {
+  console.log(req.params.id, '<--- AYO')
+  Location.findById({ _id: req.params.id }).exec(function (err, location) {
     console.log(location, "<--------location");
-    res.render("locations/show", { title: "Location Detail", location });
+    res.render("locations/show", { title: "Location Detail", location});
   });
 }
 
