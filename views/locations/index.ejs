@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<body>
+  <table id="list">
+    <thead>
+      <tr>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% locations.forEach(function(l) { %>
+      <tr>
+        <td><%= l.locationName %></td>
+        <td><a href="/locations/<%= l._id %> ">About</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>

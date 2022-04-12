@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+<body>
+  <form id="new-form" action="/locations" method="POST">
+    <label>Location Name:</label>
+    <input type="text" name="locationName" />
+    <label>Address:</label>
+    <input type="text" name="locationAddress" />
+    <label>Hours:</label>
+    <input type="time" name="hoursOfOp" />
+    <!-- <label> - </label>
+    <input type="time" name="hours-two" /> -->
+    <label>Password:</label>
+    <input type="text" name="wifiPassword" />
+    <input type="submit" value="Add Location" />
+  </form>
+</body>

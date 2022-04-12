@@ -1,0 +1,56 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+  <div>Location Name:</div>
+  <div><%= location.locationName %></div>
+  <div>Address:</div>
+  <div><%= location.locationAddress %></div>
+  <div>Hours:</div>
+  <div><%= location.hoursOfOp %></div>
+  <div>Password:</div>
+  <div><%= location.wifiPassword %></div>
+  <br />
+  <h2>Comments</h2>
+
+  <% if (user) { %>
+  <form
+    id="add-comment-form"
+    method="POST"
+    action="/locations/<%= location._id %>/comments "
+  >
+    <label for="#">User Comment:</label>
+    <textarea name="comments" id="#" cols="30" rows="10"></textarea>
+    <!-- <label>WiFi Speedscore:</label>
+      <select name="rating" id="#">
+        <option value="1">Very Poor</option>
+        <option value="2">Poor</option>
+        <option value="3">Satisfactory</option>
+        <option value="4">Good</option>
+        <option value="5">Excellent</option>
+      </select> -->
+    <button type="submit" value="Add Comment">Submit Comment</button>
+  </form>
+  <% } %> <% if (location.comments.length) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Comment</th>
+        <!-- <th>WiFi Speed Score</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <% let total=0 %> <% location.comments.forEach(function(c) { %>
+      <tr>
+        <td class="comment-user">
+          <img src="<%= c.userAvatar %>" alt="avatar" /><% c.userName %>
+        </td>
+        <td>
+          <p><%= c.comments %></p>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <% } %>
+</section>
