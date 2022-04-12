@@ -20,6 +20,7 @@
   >
     <label for="#">User Comment:</label>
     <textarea name="comments" id="#" cols="30" rows="10"></textarea>
+    <!-- comment box ^^^^ -->
     <!-- <label>WiFi Speedscore:</label>
       <select name="rating" id="#">
         <option value="1">Very Poor</option>
@@ -28,25 +29,30 @@
         <option value="4">Good</option>
         <option value="5">Excellent</option>
       </select> -->
+    <!-- comment submit button below -->
     <button type="submit" value="Add Comment">Submit Comment</button>
   </form>
-  <% } %> <% if (location.comments.length) { %>
+   <% } %> <% if (location.comments.length) { %> 
   <table>
+    <!-- posted comments table head -->
     <thead>
       <tr>
-        <th>Date</th>
+        <!-- <th>Date</th> -->
         <th>Comment</th>
         <!-- <th>WiFi Speed Score</th> -->
       </tr>
     </thead>
+    <!-- posted comments field population -->
     <tbody>
       <% let total=0 %> <% location.comments.forEach(function(c) { %>
       <tr>
         <td class="comment-user">
-          <img src="<%= c.userAvatar %>" alt="avatar" /><% c.userName %>
+          <img src="<%= c.userAvatar %>" alt="avatar" /><%= c.userName %>
         </td>
         <td>
           <p><%= c.comments %></p>
+          <!-- date prototype needed here -->
+          <p></p>
         </td>
       </tr>
       <% }); %>
@@ -54,3 +60,10 @@
   </table>
   <% } %>
 </section>
+
+<!-- Above I have a working page diplaying individual location, as well as the
+comments input field and existing comments table. I need to create the delete -->
+<!-- functionality for each comment posted by a unique user. I need to make sure
+that the username of the commentor populates when ever they leave a comment. I
+need to make sure that the comment date timestamp populates whenever a user
+leaves a comment. -->
