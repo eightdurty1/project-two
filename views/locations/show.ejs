@@ -46,8 +46,9 @@
         <td>
           <p><%= c.comments %></p>
           <!-- Return to figuring out how to display erse button -->
-          <% if (user && user._id.equals(c.user)) { %>
-          <form action="/comments/ <%= c._id %>?_method=DELETE" method="POST">
+          <% console.log(user, "<----User") %> 
+          <% console.log(c) %> <% if (user && user.name === c.userName) { %>
+          <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
             <button type="submit">Remove</button>
           </form>
           <% } %>
@@ -60,7 +61,6 @@
   </table>
   <% } else { %>
   <h5>Log in to be The first to Comment!</h5>
- 
 </section>
 <% } %>
 
