@@ -18,3 +18,13 @@
 .collection-item form {
   margin-top: -5px;
 }
+
+nav {
+  background-color: rgb(5, 107, 69);
+  width: 100%;
+  text-align: center;
+}
+
+.show-page{
+  background-color: red;
+}
