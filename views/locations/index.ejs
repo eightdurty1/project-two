@@ -9,8 +9,8 @@
     <tbody>
       <% locations.forEach(function(l) { %>
       <tr>
-        <td><%= l.locationName %></td>
-        <td><a href="/locations/<%= l._id %> ">About</a></td>
+        <td class="index-location-name"><%= l.locationName %></td>
+        <td><button class="sub-button"><a href="/locations/<%= l._id %> ">About</a></button></td>
       </tr>
       <% }); %>
     </tbody>

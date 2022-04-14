@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
+
   <div>Location Name:</div>
   <div><%= location.locationName %></div>
   <div>Address:</div>
@@ -11,7 +12,9 @@
   <div><%= location.hoursOfOp %></div>
   <div>Password:</div>
   <div><%= location.wifiPassword %></div>
+</section>
   <br />
+<section id="comments-sec">
   <h2>Comments</h2>
 
   <% if (user) { %>
@@ -53,6 +56,7 @@
             <input name="text" />
             <button type="submit">UPDATE COMMENT</button>
           </form>
+        </section>
           <% } %>
         </td>
       </tr>
@@ -62,5 +66,5 @@
     </tbody>
   </table>
   <% } else { %>
-</section>
+
 <% } %>

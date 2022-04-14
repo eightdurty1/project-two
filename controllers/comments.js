@@ -34,6 +34,9 @@ module.exports = {
 // }
 
 //one i made
+
+
+
 function editComment(req, res, next) {
   Location.findOne(
     { "comments._id": req.params.id },
@@ -51,6 +54,13 @@ function editComment(req, res, next) {
     }
   );
 }
+
+
+
+
+
+
+
 
 function deleteComment(req, res, next) {
   Location.findOne(
