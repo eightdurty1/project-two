@@ -62,6 +62,14 @@ app.use(function (req, res, next) {
   next();
 });
 
+
+// //global variables
+// app.use(function (req, res, next) {
+//   res.locals.isClicked = false;
+//   res.locals.buttonClicked = () => {res.locals.isClicked = !res.locals.isClicked}
+//   next();
+// })
+
 // mount all routes with appropriate base paths
 app.use("/locations", locationsRouter);
 app.use("/", commentsRouter);
@@ -83,5 +91,7 @@ app.use(function (err, req, res, next){
   res.status(err.status || 500);
   res.render("error");
 });
+
+
 
 module.exports = app;

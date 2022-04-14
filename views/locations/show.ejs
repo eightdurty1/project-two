@@ -22,7 +22,6 @@
   >
     <label for="#">Leave a Comment:</label>
     <textarea name="comments" id="#" cols="30" rows="10"></textarea>
-
     <button type="submit" value="Add Comment">Submit Comment</button>
   </form>
   <% } %> <% if (location.comments.length) { %>
@@ -42,31 +41,26 @@
         <td class="comment-user">
           <img src="<%= c.userAvatar %>" alt="avatar" /><%= c.userName %>
         </td>
-
         <td>
           <p><%= c.comments %></p>
           <!-- Return to figuring out how to display erse button -->
-          <% console.log(user, "<----User") %> 
-          <% console.log(c) %> <% if (user && user.name === c.userName) { %>
+          <% console.log(user, "<----User") %> <% console.log(c) %> <% if (user
+          && user.name === c.userName) { %>
           <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
             <button type="submit">Remove</button>
+          </form>
+          <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
+            <input name="text" />
+            <button type="submit">UPDATE COMMENT</button>
           </form>
           <% } %>
         </td>
       </tr>
       <% }); %>
-      <h5>Log in to Leave a Comment!</h5>
+
       <!-- <td colspan="9"></td> -->
     </tbody>
   </table>
   <% } else { %>
-  <h5>Log in to be The first to Comment!</h5>
 </section>
 <% } %>
-
-<!-- Above I have a working page diplaying individual location, as well as the
-comments input field and existing comments table. I need to create the delete -->
-<!-- functionality for each comment posted by a unique user. I need to make sure
-that the username of the commentor populates when ever they leave a comment. I
-need to make sure that the comment date timestamp populates whenever a user
-leaves a comment. -->
