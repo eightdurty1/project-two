@@ -1,21 +1,23 @@
 <%- include('../partials/header') %>
-
+<h2>WiFi Location Detail</h2>
 <section id="show-page">
 
-  <div>Location Name:</div>
+  <div class="detail-title">Location Name:</div>
   <div><%= location.locationName %></div>
-  <div>Address:</div>
+  <div class="detail-title">Address:</div>
   <div><%= location.locationAddress %></div>
-  <div>Hours:</div>
+  <div class="detail-title">Hours:</div>
+  <div id="hours-op">
   <div><%= location.hoursOfOp %></div>
   <div>-</div>
   <div><%= location.hoursOfOp %></div>
-  <div>Password:</div>
+</div>
+  <div class="detail-title">Password:</div>
   <div><%= location.wifiPassword %></div>
 </section>
   <br />
 <section id="comments-sec">
-  <h2>Comments</h2>
+  <h2 id="h-comments">Comments</h2>
 
   <% if (user) { %>
   <form
@@ -23,43 +25,54 @@
     method="POST"
     action="/locations/<%= location._id %>/comments "
   >
-    <label for="#">Leave a Comment:</label>
-    <textarea name="comments" id="#" cols="30" rows="10"></textarea>
-    <button type="submit" value="Add Comment">Submit Comment</button>
+    <label id="leave-comment" for="#">Leave a Comment:</label>
+    <textarea name="comments" id="comment-area"></textarea>
+    <button id="sub-comm" type="submit" value="Add Comment">Submit Comment</button>
   </form>
   <% } %> <% if (location.comments.length) { %>
   <table>
     <!-- posted comments table head -->
-    <thead>
+    <thead id="comment-section-title">
       <tr>
-        <th>User</th>
-        <th>Comment</th>
+        <th id="user-head-title">User</th>
+        <th id="user-comment-title">Comment</th>
         <!-- <th>WiFi Speed Score</th> -->
       </tr>
     </thead>
     <!-- posted comments field population -->
-    <tbody>
+    <tbody id="body-comments-u">
       <% location.comments.forEach(function(c) { %>
-      <tr>
+      <tr id="user-and-comment">
         <td class="comment-user">
-          <img src="<%= c.userAvatar %>" alt="avatar" /><%= c.userName %>
+          <img id="user-avatar" src="<%= c.userAvatar %>" alt="avatar" /><span id="user-name"><%= c.userName %></span>
         </td>
-        <td>
+        <td id="comment-updates-space">
+          <div id="comment-space">
           <p><%= c.comments %></p>
           <!-- Return to figuring out how to display erse button -->
           <% console.log(user, "<----User") %> <% console.log(c) %> <% if (user
           && user.name === c.userName) { %>
           <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-            <button type="submit">Remove</button>
+            <button id="remove-comm" type="submit">Remove</button>
           </form>
-          <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
-            <input name="text" />
-            <button type="submit">UPDATE COMMENT</button>
-          </form>
+        </div>
+        
+       
         </section>
-          <% } %>
+          
         </td>
       </tr>
+      <tr id="update-comment-wrap">
+        <td>
+          
+          <form id="form-update" action="/comments/<%= c._id %>?_method=PUT" method="POST">
+            <input id="input-field" name="text" />
+            <button id="update-comm" type="submit">Update Comment</button>
+          </form>
+        
+          </td>
+        </tr>
+        <% } %>
       <% }); %>
 
       <!-- <td colspan="9"></td> -->

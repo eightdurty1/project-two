@@ -3,14 +3,14 @@
   <table id="list">
     <thead>
       <tr>
-        <th>Location</th>
+        <th class="location-head">Locations</th>
       </tr>
     </thead>
     <tbody>
       <% locations.forEach(function(l) { %>
       <tr>
         <td class="index-location-name"><%= l.locationName %></td>
-        <td><button class="sub-button"><a href="/locations/<%= l._id %> ">About</a></button></td>
+        <td><a class="sub-button" href="/locations/<%= l._id %> "><button >Details</button></a></td>
       </tr>
       <% }); %>
     </tbody>
