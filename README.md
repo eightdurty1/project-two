@@ -1,35 +1,9 @@
-# passport-boilerplate
+The idea for creating a crowd-sourced wifi directory for the community of Salinas came as a response to the lack of access to reliable home internet. During the pandemic, this need became amplified as people transitioned to a virtual-first format for everyday services and activities. This crowd-sourced app allows users to view local public spaces that offer free wifi. If users wish to contribute a location and its details, they can log in using their Google account.
+
+Technologies Used: HTML, CSS, JavaScript, NodeJs, MongoDB, Express, Whimsical, Git, GitHub.
 
 
-This is your passport boilerplate.
-
-## Setup 
-
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+Getting Started:If a user wishes to view wifi locations and their details, there is no need to log in since locations, and their details are viewable to everyone. However, if users wish to contribute by adding a place or leaving a comment, they must sign in using their Google account. 
 
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin master` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin master`
-
-#### Setup your login
-
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
-
-#### Make a commit 
-
-```git commit -m "setup up oauth and User Model"```
+This app can benefit from implementing a mobile-first approach that can be readable and easy to load on a mobile phone browser. Also, adding a map API such as leaflet or Google Maps can improve the user experience by adding a visual map component. Lastly, I think this directory can be included as a feature to a more extensive crowd-sourced guide that offers information regarding services such as affordable housing and food access. 
