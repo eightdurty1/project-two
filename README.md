@@ -3,7 +3,8 @@ The idea for creating a crowd-sourced wifi directory for the community of Salina
 Technologies Used: HTML, CSS, JavaScript, NodeJs, MongoDB, Express, Whimsical, Git, GitHub.
 
 
-Getting Started:If a user wishes to view wifi locations and their details, there is no need to log in since locations, and their details are viewable to everyone. However, if users wish to contribute by adding a place or leaving a comment, they must sign in using their Google account. 
+Getting Started:If a user wishes to view wifi locations and their details, there is no need to log in since locations, and their details are viewable to everyone. However, if users wish to contribute by adding a place or leaving a comment, they must sign in using their Google account.
 
+https://salinas-wifi-locations.herokuapp.com/
 
 This app can benefit from implementing a mobile-first approach that can be readable and easy to load on a mobile phone browser. Also, adding a map API such as leaflet or Google Maps can improve the user experience by adding a visual map component. Lastly, I think this directory can be included as a feature to a more extensive crowd-sourced guide that offers information regarding services such as affordable housing and food access. 
