@@ -1,5 +1,9 @@
 The idea for creating a crowd-sourced wifi directory for the community of Salinas came as a response to the lack of access to reliable home internet. During the pandemic, this need became amplified as people transitioned to a virtual-first format for everyday services and activities. This crowd-sourced app allows users to view local public spaces that offer free wifi. If users wish to contribute a location and its details, they can log in using their Google account.
 
+The spreadsheet that started it all!
+![Screen Shot 2022-04-15 at 11 04 19 AM](https://user-images.githubusercontent.com/67360761/163605323-cbb92c98-2e13-4c18-8ceb-8bfb9c79030b.png)
+
+
 
 ![Screen Shot 2022-04-15 at 9 17 35 AM](https://user-images.githubusercontent.com/67360761/163594983-38a87fde-9554-459c-be1a-33e79efbd61e.png)
 
